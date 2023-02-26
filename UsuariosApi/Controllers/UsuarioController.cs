@@ -12,12 +12,14 @@ namespace UsuariosApi.Controllers
     [Route("[Controller]")]
     public class UsuarioController : ControllerBase
     {
+
         private CadastroService _cadastroService;
 
         public UsuarioController(CadastroService cadastroService)
         {
             _cadastroService = cadastroService;
         }
+
 
         [HttpPost]
         public async Task<IActionResult> CadastraUsuario

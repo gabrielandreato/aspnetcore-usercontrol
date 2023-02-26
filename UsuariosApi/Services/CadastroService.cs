@@ -10,10 +10,10 @@ namespace UsuariosApi.Services
         private IMapper _mapper;
         private UserManager<Usuario> _userManager;
 
-        public CadastroService(IMapper mapper, UserManager<Usuario> userManager)
+        public CadastroService(UserManager<Usuario> userManager, IMapper mapper)
         {
-            _mapper = mapper;
             _userManager = userManager;
+            _mapper = mapper;
         }
 
         public async Task CadastraUsuario(CreateUsuarioDto dto)
@@ -26,6 +26,7 @@ namespace UsuariosApi.Services
             {
                 throw new ApplicationException("Falha ao cadastrar usuário!");
             }
+            
         }
     }
 }
