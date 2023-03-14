@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using UsuariosApi.Data.Dtos;
 
 namespace UsuariosApi.Controllers
