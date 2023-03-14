@@ -2,7 +2,7 @@
 
 namespace UsuariosApi.Models
 {
-    public class Usuario : IdentityUser
+    public class Usuario
     {
     }
 }
