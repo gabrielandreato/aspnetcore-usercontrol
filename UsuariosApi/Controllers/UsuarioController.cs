@@ -10,7 +10,7 @@ namespace UsuariosApi.Controllers
     {
         
         [HttpPost]
-        public IActionResult CadastraUsuario(CreateUsuarioDto dto)
+        public Task<IActionResult> CadastraUsuario(CreateUsuarioDto dto)
         {
             throw new NotImplementedException();
         }
