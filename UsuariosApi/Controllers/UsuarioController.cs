@@ -1,9 +1,5 @@
-﻿using System;
-using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using UsuariosApi.Data.Dtos;
-using UsuariosApi.Models;
 using UsuariosApi.Services.Interface;
 
 namespace UsuariosApi.Controllers;
@@ -12,18 +8,32 @@ namespace UsuariosApi.Controllers;
 [Route("[Controller]")]
 public class UsuarioController : ControllerBase
 {
-    private ICadastroService _cadastroService;
+    private IUsuarioService _usuarioService;
 
-    public UsuarioController(ICadastroService cadastroService)
+    public UsuarioController(IUsuarioService usuarioService)
     {
-        _cadastroService = cadastroService;
+        _usuarioService = usuarioService;
 
     }
 
-    [HttpPost]
+    [HttpPost("Cadastrar")]
     public async Task<IActionResult> CadastraUsuario(CreateUsuarioDto createUsuarioDto)
     {
-        await _cadastroService.Cadastra(createUsuarioDto);
+        await _usuarioService.Cadastra(createUsuarioDto);
         return Ok("Usuário cadastrado!");
+    }
+    
+    [HttpPost("Login")]
+    public async Task<IActionResult> Login(LoginUsuarioDto loginUsuarioDto)
+    {
+        try
+        {
+            var token = await _usuarioService.Login(loginUsuarioDto);
+            return Ok(token);
+
+        } catch (Exception e)
+        {
+            return BadRequest(e);
+        }
     }
 }
