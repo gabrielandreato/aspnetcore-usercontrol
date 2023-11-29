@@ -33,7 +33,7 @@ public class UsuarioController : ControllerBase
 
         } catch (Exception e)
         {
-            return BadRequest(e);
+            return BadRequest(e.Message);
         }
     }
 }

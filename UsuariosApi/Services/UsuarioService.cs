@@ -26,34 +26,35 @@ public class UsuarioService : IUsuarioService
     {
         var usuario = _mapper.Map<CreateUsuarioDto, Usuario>(createUsuarioDto);
 
-        var resultado = await _userManager.CreateAsync(usuario);
+        var result = await _userManager.CreateAsync(usuario, createUsuarioDto.Password);
 
-        if (!resultado.Succeeded)
-            throw new Exception("Falha ao cadastrar usuário!", new Exception(resultado.Errors.First().Description));
+        if (!result.Succeeded)
+            throw new Exception("Falha ao cadastrar usuário!", new Exception(result.Errors.First().Description));
     }
 
     public async Task<string> Login(LoginUsuarioDto dto)
     {
-        //TODO: corrigir falha no retorno do usuario.
-        var resultado = await _signInManager.PasswordSignInAsync(
-            dto.Username,
-            dto.Password,
-            false,
-            false
-        );
-
-        if (!resultado.Succeeded)
+        try
         {
-            throw new ApplicationException("Usuario não autenticado");
+            var result = await _signInManager.PasswordSignInAsync(
+                dto.Username,
+                dto.Password,
+                false,
+                false
+            );
+            if (!result.Succeeded) throw new ApplicationException("Usuario não autenticado");
+
+            var user = _signInManager
+                .UserManager
+                .Users
+                .First(x => x.NormalizedUserName == dto.Username);
+
+            var token = _tokenService.GenerateToken(user);
+
+            return token;
+        } catch (Exception e)
+        {
+            throw new Exception("Falha de autenticação", e.InnerException);
         }
-
-        var usuario = _signInManager
-            .UserManager
-            .Users
-            .FirstOrDefault(x => x.NormalizedUserName == dto.Username);
-
-        string token =  _tokenService.GenerateToken(usuario);
-        
-        return token;
     }
 }

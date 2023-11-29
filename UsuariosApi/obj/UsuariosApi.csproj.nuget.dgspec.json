@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\estudo\\authentication\\UsuariosApi\\UsuariosApi.csproj": {}
+    "C:\\Projetos\\MeusProjetos\\aspnetcore-usercontrol\\UsuariosApi\\UsuariosApi.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\estudo\\authentication\\UsuariosApi\\UsuariosApi.csproj": {
+    "C:\\Projetos\\MeusProjetos\\aspnetcore-usercontrol\\UsuariosApi\\UsuariosApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\estudo\\authentication\\UsuariosApi\\UsuariosApi.csproj",
+        "projectUniqueName": "C:\\Projetos\\MeusProjetos\\aspnetcore-usercontrol\\UsuariosApi\\UsuariosApi.csproj",
         "projectName": "UsuariosApi",
-        "projectPath": "C:\\Dev\\estudo\\authentication\\UsuariosApi\\UsuariosApi.csproj",
-        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\estudo\\authentication\\UsuariosApi\\obj\\",
+        "projectPath": "C:\\Projetos\\MeusProjetos\\aspnetcore-usercontrol\\UsuariosApi\\UsuariosApi.csproj",
+        "packagesPath": "C:\\Users\\gabriel.andreato\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\MeusProjetos\\aspnetcore-usercontrol\\UsuariosApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gabriel.andreato\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
