@@ -104,3 +104,6 @@ C:\Projetos\MeusProjetos\aspnetcore-usercontrol\UsuariosApi\obj\Debug\net6.0\ref
 C:\Projetos\MeusProjetos\aspnetcore-usercontrol\UsuariosApi\obj\Debug\net6.0\UsuariosApi.pdb
 C:\Projetos\MeusProjetos\aspnetcore-usercontrol\UsuariosApi\obj\Debug\net6.0\UsuariosApi.genruntimeconfig.cache
 C:\Projetos\MeusProjetos\aspnetcore-usercontrol\UsuariosApi\obj\Debug\net6.0\ref\UsuariosApi.dll
+C:\Projetos\MeusProjetos\aspnetcore-usercontrol\UsuariosApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projetos\MeusProjetos\aspnetcore-usercontrol\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Projetos\MeusProjetos\aspnetcore-usercontrol\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
